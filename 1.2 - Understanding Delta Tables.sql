@@ -34,3 +34,32 @@ select * from employees;
 -- COMMAND ----------
 
 describe detail employees;
+
+-- COMMAND ----------
+
+-- MAGIC %fs ls 'dbfs:/user/hive/warehouse/employees'
+
+-- COMMAND ----------
+
+-- MAGIC %fs ls 'dbfs:/user/hive/warehouse/employees'
+
+-- COMMAND ----------
+
+update employees set salary = salary + 100
+where name like "A%"
+
+-- COMMAND ----------
+
+select * from employees;
+
+-- COMMAND ----------
+
+describe detail employees;
+
+-- COMMAND ----------
+
+describe history employees;
+
+-- COMMAND ----------
+
+-- MAGIC %fs ls 'dbfs:/user/hive/warehouse/employees/_delta_log'
